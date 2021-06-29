@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy import signal
 
 def gene_sample():    #サンプル生成の関数
-    Hz = 100
+    Hz = 20
     Period = 1/Hz    #サンプリング周期
     Number = 1000
     y = np.zeros((1,Number))
@@ -27,7 +27,7 @@ def hw(T , t , D ,Lw):    #h_w(t)を算出する関数
     return h_w
 
 t,y,p,num = gene_sample()   
-delay = 5
+delay = 20
 h_w = [hw(p,i * p, delay, p * 10) for i in range(0,num)]
 
 #print(np.array(h_w))   #検証用
